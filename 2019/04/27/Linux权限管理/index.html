@@ -104,8 +104,9 @@
 
 
   <meta name="description" content="Linux下有两种用户：  root(超级用户)    、普通用户； 超级用户（root）的命令提示符为 #普通用户的命令提示符为$ 两种用户的切换可以用su指令完成；由root用户切换到lwt用户 （su lwt）,由lwt用户切换到root  (su root)或者（su）root可以省略； 文件类型和访问权限： 文件类型：访问权限： r代表可读     w代表可写      x代表可执行">
+<meta name="keywords" content="分享,学习,快乐">
 <meta property="og:type" content="article">
-<meta property="og:title" content="逆行者">
+<meta property="og:title" content="Linux权限管理">
 <meta property="og:url" content="http://lwt-hhh.github.io/2019/04/27/Linux权限管理/index.html">
 <meta property="og:site_name" content="逆行者">
 <meta property="og:description" content="Linux下有两种用户：  root(超级用户)    、普通用户； 超级用户（root）的命令提示符为 #普通用户的命令提示符为$ 两种用户的切换可以用su指令完成；由root用户切换到lwt用户 （su lwt）,由lwt用户切换到root  (su root)或者（su）root可以省略； 文件类型和访问权限： 文件类型：访问权限： r代表可读     w代表可写      x代表可执行">
@@ -115,9 +116,9 @@
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190422163821258.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIxNTA2OA==,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190422173518268.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIxNTA2OA==,size_16,color_FFFFFF,t_70">
 <meta property="og:image" content="https://img-blog.csdnimg.cn/20190422173558369.png">
-<meta property="og:updated_time" content="2019-04-27T11:33:25.062Z">
+<meta property="og:updated_time" content="2019-04-27T11:56:04.389Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="逆行者">
+<meta name="twitter:title" content="Linux权限管理">
 <meta name="twitter:description" content="Linux下有两种用户：  root(超级用户)    、普通用户； 超级用户（root）的命令提示符为 #普通用户的命令提示符为$ 两种用户的切换可以用su指令完成；由root用户切换到lwt用户 （su lwt）,由lwt用户切换到root  (su root)或者（su）root可以省略； 文件类型和访问权限： 文件类型：访问权限： r代表可读     w代表可写      x代表可执行">
 <meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190422163156930.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIxNTA2OA==,size_16,color_FFFFFF,t_70">
 
@@ -137,7 +138,7 @@
   };
 </script>
 
-  <title> | 逆行者</title>
+  <title>Linux权限管理 | 逆行者</title>
   
 
 
@@ -391,7 +392,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
+          <h1 class="post-title" itemprop="name headline">Linux权限管理
 
               
             
@@ -417,7 +418,7 @@
                 
               
 
-              <time title="创建时间：2019-04-27 19:33:24 / 修改时间：19:33:25" itemprop="dateCreated datePublished" datetime="2019-04-27T19:33:24+08:00">2019-04-27</time>
+              <time title="创建时间：2019-04-27 19:40:11 / 修改时间：19:56:04" itemprop="dateCreated datePublished" datetime="2019-04-27T19:40:11+08:00">2019-04-27</time>
             
 
             
@@ -427,6 +428,24 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -550,6 +569,16 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/分享/" rel="tag"># 分享</a>
+          
+            <a href="/tags/学习/" rel="tag"># 学习</a>
+          
+            <a href="/tags/快乐/" rel="tag"># 快乐</a>
+          
+        </div>
+      
 
       
       
@@ -636,7 +665,45 @@
               
 
               
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
 
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
               
             </nav>
           

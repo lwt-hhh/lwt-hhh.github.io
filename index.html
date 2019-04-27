@@ -368,6 +368,206 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lwt-hhh.github.io/2019/04/27/Linux权限管理/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lwt">
+      <meta itemprop="description" content="年轻就是让不可能变为可能">
+      <meta itemprop="image" content="/images/IMG_20190222_163916.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="逆行者">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/04/27/Linux权限管理/" class="post-title-link" itemprop="url">Linux权限管理</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-04-27 19:40:11 / 修改时间：19:56:04" itemprop="dateCreated datePublished" datetime="2019-04-27T19:40:11+08:00">2019-04-27</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Linux/" itemprop="url" rel="index"><span itemprop="name">Linux</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">607</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>Linux下有两种用户：</strong>  root(超级用户)    、普通用户；</p>
+<p>超级用户（root）的命令提示符为 #<br>普通用户的命令提示符为$</p>
+<p>两种用户的切换可以用<strong>su</strong>指令完成；由root用户切换到lwt用户 （<strong>su lwt</strong>）,由lwt用户切换到root  (<strong>su root</strong>)或者（<strong>su</strong>）root可以省略；</p>
+<p><strong>文件类型和访问权限：</strong></p>
+<p>文件类型：<br><img src="https://img-blog.csdnimg.cn/20190422163156930.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIxNTA2OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>访问权限：</p>
+<p><img src="https://img-blog.csdnimg.cn/20190422163252837.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIxNTA2OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>r代表可读     w代表可写      x代表可执行     -代表无权限：</strong></p>
+<p>  <img src="https://img-blog.csdnimg.cn/20190422163821258.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIxNTA2OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>  <strong>文件权限的设置：</strong></p>
+<p><strong>chmod指令：</strong><br> 语法： chmod  权限   文件名<br> 例如：chmod  777   a.txt                 (将a.txt文件的权限设置为可读可写可执行)</p>
+<p><strong>U:代表拥有者</strong><br><strong>g:代表拥有着所属组</strong><br><strong>o:代表其他用户</strong><br><strong>a代表所有用户</strong></p>
+<p><strong>指定给u   g   o   a某一个加权限：</strong><br>例如：chmod u+x a.txt  (<strong>表示a.txt这个文件的拥有着加可执行权限</strong>)<br>           chmod u-w a.txt (<strong>表示将a.txt这个文件的拥有者的可写权限取消</strong>)</p>
+<p><strong>目录的权限：</strong><br>1.可读权限： 如果目录没有可读权限，就不能用<strong>ls</strong>命令查看目录底下的东西；<br>2.可写权限：如果目录没有可写权限就不能在目录底下  创建文件，也不能在目录底下删除文件；<br>3.可执行权限：如果目录没有可执行权限，就不能用<strong>cd</strong>命令进入到目录中去；</p>
+<p><strong>粘滞位：（chmod +t）</strong><br><img src="https://img-blog.csdnimg.cn/20190422173518268.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIxNTA2OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190422173558369.png" alt="在这里插入图片描述"></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://lwt-hhh.github.io/2019/04/27/祖国利益高于一切/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -563,14 +763,52 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
               
 
               
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                    <span class="site-state-item-count">1</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
 
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
               
             </nav>
           
@@ -647,7 +885,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">0k</span>
+    <span title="站点总字数">1k</span>
   
 
   
