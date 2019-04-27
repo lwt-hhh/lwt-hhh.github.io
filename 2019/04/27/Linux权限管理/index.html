@@ -103,16 +103,23 @@
 
 
 
-  <meta name="description" content="年轻就是让不可能变为可能">
-<meta property="og:type" content="website">
+  <meta name="description" content="Linux下有两种用户：  root(超级用户)    、普通用户； 超级用户（root）的命令提示符为 #普通用户的命令提示符为$ 两种用户的切换可以用su指令完成；由root用户切换到lwt用户 （su lwt）,由lwt用户切换到root  (su root)或者（su）root可以省略； 文件类型和访问权限： 文件类型：访问权限： r代表可读     w代表可写      x代表可执行">
+<meta property="og:type" content="article">
 <meta property="og:title" content="逆行者">
-<meta property="og:url" content="http://lwt-hhh.github.io/archives/index.html">
+<meta property="og:url" content="http://lwt-hhh.github.io/2019/04/27/Linux权限管理/index.html">
 <meta property="og:site_name" content="逆行者">
-<meta property="og:description" content="年轻就是让不可能变为可能">
+<meta property="og:description" content="Linux下有两种用户：  root(超级用户)    、普通用户； 超级用户（root）的命令提示符为 #普通用户的命令提示符为$ 两种用户的切换可以用su指令完成；由root用户切换到lwt用户 （su lwt）,由lwt用户切换到root  (su root)或者（su）root可以省略； 文件类型和访问权限： 文件类型：访问权限： r代表可读     w代表可写      x代表可执行">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190422163156930.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIxNTA2OA==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190422163252837.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIxNTA2OA==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190422163821258.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIxNTA2OA==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190422173518268.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIxNTA2OA==,size_16,color_FFFFFF,t_70">
+<meta property="og:image" content="https://img-blog.csdnimg.cn/20190422173558369.png">
+<meta property="og:updated_time" content="2019-04-27T11:33:25.062Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="逆行者">
-<meta name="twitter:description" content="年轻就是让不可能变为可能">
+<meta name="twitter:description" content="Linux下有两种用户：  root(超级用户)    、普通用户； 超级用户（root）的命令提示符为 #普通用户的命令提示符为$ 两种用户的切换可以用su指令完成；由root用户切换到lwt用户 （su lwt）,由lwt用户切换到root  (su root)或者（su）root可以省略； 文件类型和访问权限： 文件类型：访问权限： r代表可读     w代表可写      x代表可执行">
+<meta name="twitter:image" content="https://img-blog.csdnimg.cn/20190422163156930.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIxNTA2OA==,size_16,color_FFFFFF,t_70">
 
 
 
@@ -120,7 +127,7 @@
 
   
   
-  <link rel="canonical" href="http://lwt-hhh.github.io/archives/">
+  <link rel="canonical" href="http://lwt-hhh.github.io/2019/04/27/Linux权限管理/">
 
 
 
@@ -130,7 +137,7 @@
   };
 </script>
 
-  <title>归档 | 逆行者</title>
+  <title> | 逆行者</title>
   
 
 
@@ -178,7 +185,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -271,7 +278,7 @@
         
         
           
-          <li class="menu-item menu-item-archives menu-item-active">
+          <li class="menu-item menu-item-archives">
 
     
     
@@ -347,142 +354,244 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
 
-      
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        嗯..! 目前共计 2 篇日志。 继续努力。
-      </span>
-      
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
-
-        
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://lwt-hhh.github.io/2019/04/27/Linux权限管理/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="lwt">
+      <meta itemprop="description" content="年轻就是让不可能变为可能">
+      <meta itemprop="image" content="/images/IMG_20190222_163916.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="逆行者">
+    </span>
+
+    
+      <header class="post-header">
+
         
-          <a class="post-title-link" href="/2019/04/27/Linux权限管理/" itemprop="url">
-            
-              <span itemprop="name">未命名</span>
-            
-          </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-27T19:33:24+08:00" content="2019-04-27">
-          04-27
-        </time>
-      </div>
+              
+            
+          </h1>
+        
 
-    </header>
-  </article>
+        <div class="post-meta">
+          <span class="post-time">
 
+            
+            
+            
 
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-04-27 19:33:24 / 修改时间：19:33:25" itemprop="dateCreated datePublished" datetime="2019-04-27T19:33:24+08:00">2019-04-27</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">607</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">1 分钟</span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/04/27/祖国利益高于一切/" itemprop="url">
-            
-              <span itemprop="name">祖国利益高于一切</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-04-27T10:30:44+08:00" content="2019-04-27">
-          04-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
+      
+        <p><strong>Linux下有两种用户：</strong>  root(超级用户)    、普通用户；</p>
+<p>超级用户（root）的命令提示符为 #<br>普通用户的命令提示符为$</p>
+<p>两种用户的切换可以用<strong>su</strong>指令完成；由root用户切换到lwt用户 （<strong>su lwt</strong>）,由lwt用户切换到root  (<strong>su root</strong>)或者（<strong>su</strong>）root可以省略；</p>
+<p><strong>文件类型和访问权限：</strong></p>
+<p>文件类型：<br><img src="https://img-blog.csdnimg.cn/20190422163156930.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIxNTA2OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>访问权限：</p>
+<p><img src="https://img-blog.csdnimg.cn/20190422163252837.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIxNTA2OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>r代表可读     w代表可写      x代表可执行     -代表无权限：</strong></p>
+<p>  <img src="https://img-blog.csdnimg.cn/20190422163821258.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIxNTA2OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>  <strong>文件权限的设置：</strong></p>
+<p><strong>chmod指令：</strong><br> 语法： chmod  权限   文件名<br> 例如：chmod  777   a.txt                 (将a.txt文件的权限设置为可读可写可执行)</p>
+<p><strong>U:代表拥有者</strong><br><strong>g:代表拥有着所属组</strong><br><strong>o:代表其他用户</strong><br><strong>a代表所有用户</strong></p>
+<p><strong>指定给u   g   o   a某一个加权限：</strong><br>例如：chmod u+x a.txt  (<strong>表示a.txt这个文件的拥有着加可执行权限</strong>)<br>           chmod u-w a.txt (<strong>表示将a.txt这个文件的拥有者的可写权限取消</strong>)</p>
+<p><strong>目录的权限：</strong><br>1.可读权限： 如果目录没有可读权限，就不能用<strong>ls</strong>命令查看目录底下的东西；<br>2.可写权限：如果目录没有可写权限就不能在目录底下  创建文件，也不能在目录底下删除文件；<br>3.可执行权限：如果目录没有可执行权限，就不能用<strong>cd</strong>命令进入到目录中去；</p>
+<p><strong>粘滞位：（chmod +t）</strong><br><img src="https://img-blog.csdnimg.cn/20190422173518268.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzIxNTA2OA==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><img src="https://img-blog.csdnimg.cn/20190422173558369.png" alt="在这里插入图片描述"></p>
+
+      
     </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+      <div>
+        <div id="reward-container">
+  <div>大佬给点零花钱吧</div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/wechatpay.png" alt="lwt 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/alipay.png" alt="lwt 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/27/祖国利益高于一切/" rel="next" title="祖国利益高于一切">
+                <i class="fa fa-chevron-left"></i> 祖国利益高于一切
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -721,6 +830,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.0"></script>
+<script src="/js/post-details.js?v=7.1.0"></script>
+
+
 
   
 
@@ -736,6 +849,8 @@
 
   
 
+
+  
 
 
   
